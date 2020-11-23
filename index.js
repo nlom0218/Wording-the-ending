@@ -107,6 +107,7 @@ hasSaveGame = () => {
 };
 
 function init() {
+  saveGame();
   $startGame.addEventListener("submit", handleMakeFirstWord);
   $playGame.addEventListener("submit", handleInputWord);
   $resetBtn.addEventListener("click", handleClickResetBtn);
