@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>끝말잇기</title>
+</head>
+
+<body>
+    <header class="title">
+        👩끝말잇기 게임🧑
+    </header>
+    <form id="js-startGame" class="startGame" autocomplete="off">
+        <input id="js-inputFirstWord" class="inputFirstWord" type="text" placeholder="제시어를 입력하세요">
+    </form>
+    <div class="wordContainer hiding">
+        <div id="js-5thWord" class="wordContainer_5thWord"></div>
+        <div id="js-4thWord" class="wordContainer_4thWord"></div>
+        <div id="js-3rdWord" class="wordContainer_3rdWord"></div>
+        <div id="js-2ndWord" class="wordContainer_2ndWord"></div>
+        <div id="js-curWord" class="wordContainer_curWord"></div>
+    </div>
+    <form id="js-playGame" class="hiding" autocomplete="off">
+        <input id="js-inputWord" class="inputWord" type="text" placeholder="단어를 입력하세요">
+    </form>
+    <button id="js-resetBtn" class="resetBtn hiding">다시하기</button>
+    <script src="./index.js"></script>
+</body>
+
+</html>

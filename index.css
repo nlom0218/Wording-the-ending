@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+  background: linear-gradient(0.25turn, #ff512f, #dd2476);
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  margin-top: 70px;
+  margin-bottom: 50px;
+  font-size: 90px;
+  font-weight: 900;
+  color: #051e3e;
+}
+
+.inputFirstWord {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  text-align: center;
+  padding: 15px 40px;
+  background-color: #251e3e;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.wordContainer div {
+  height: 70px;
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.inputWord {
+  position: absolute;
+  bottom: 160px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 24px;
+  text-align: center;
+  padding: 15px 40px;
+  background-color: #251e3e;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 10px;
+}
+
+.resetBtn {
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  padding: 10px 20px;
+  background-color: #251e3e;
+  border: none;
+  outline: none;
+  color: #e7d3d3;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+.hiding {
+  display: none;
+}
+
+input::placeholder {
+  color: #e7d3d3;
+}
+
+.wordContainer_curWord {
+  color: #451e3e;
+}
+
+.wordContainer_2ndWord {
+  color: #451e3ed2;
+}
+
+.wordContainer_3rdWord {
+  color: #451e3e9b;
+}
+
+.wordContainer_4thWord {
+  color: #451e3e62;
+}
+
+.wordContainer_5thWord {
+  color: #451e3e1e;
+}
