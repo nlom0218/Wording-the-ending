@@ -54,19 +54,22 @@ printWord = (word) => {
 handleInputWord = (e) => {
   e.preventDefault();
   const word = $inputWord.value;
+  console.log(word.length);
   $inputWord.value = "";
   if (curWord() !== word[0]) {
     alert("첫 글자를 확인 후 다시 입력하세요");
   } else if (wordHistory.includes(word)) {
     alert("중복된 낱말입니다. 다시 입력하세요");
+  } else if (word.length > 3 || word.length < 2) {
+    alert("단어는 두 글자 또는 세 글자 입니다");
   } else {
     wordHistory.push(word);
     printWord(word);
-    console.log(wordHistory);
   }
 };
 
 handleMakeFirstWord = (e) => {
+  saveGame();
   e.preventDefault();
   $firstWord.classList.add("hiding");
   $wordContainer.classList.remove("hiding");
@@ -95,19 +98,18 @@ handleClickResetBtn = () => {
 hasSaveGame = () => {
   const saveWord = JSON.parse(localStorage.getItem("wordGame"));
   wordHistory = saveWord;
-  if (saveWord[0] === undefined) {
+  if (wordHistory[0] === undefined) {
     $curWord.innerText = "";
   } else {
     $firstWord.classList.add("hiding");
     $wordContainer.classList.remove("hiding");
     $playGame.classList.remove("hiding");
     $resetBtn.classList.remove("hiding");
-    printWord(saveWord[saveWord.length - 1]);
+    printWord(wordHistory[wordHistory.length - 1]);
   }
 };
 
 function init() {
-  saveGame();
   $startGame.addEventListener("submit", handleMakeFirstWord);
   $playGame.addEventListener("submit", handleInputWord);
   $resetBtn.addEventListener("click", handleClickResetBtn);
